@@ -1,0 +1,31 @@
+{
+  "grupo": "4",
+  "fecha_entrega": "12 de noviembre de 2026",
+  "repo": "https://github.com/DSCrip07/PW2026_BookGoLite",
+  "integrantes": [
+    {
+      "nombre": "Josua Martinez",
+      "github": "DSCrip07",
+      "modulo": "Autenticación y sesiones",
+      "reflexion": "Mi módulo fue la autenticación y las sesiones: registro, inicio y cierre de sesión, la política de contraseñas y el bloqueo por intentos fallidos. Lo más importante que entendí es que ocultar un botón o un menú no es seguridad: cada página valida el rol en PHP, porque cualquiera puede escribir la dirección directamente. Entendí también por qué las contraseñas se guardan con password_hash y se comparan con password_verify, y por qué el mensaje de error es el mismo exista o no el correo. Implementamos la contraseña con carácter especial obligatorio y el bloqueo tras cinco intentos, que se aplica por correo para que otra cuenta pueda seguir entrando. Además ejecuté las pruebas de seguridad en el navegador y tomé las capturas. Puedo explicar login.php, registro.php, password_policy.php y cómo funcionan el token CSRF y la regeneración de la sesión. Parte del código se desarrolló con asistencia de IA; lo revisé y lo probé en mi equipo."
+    },
+    {
+      "nombre": "Cristhofer Villarreal",
+      "github": "cristhofer-11",
+      "modulo": "Catálogo y administración",
+      "reflexion": "Mi módulo fue el esquema de la base de datos, el catálogo y la administración de categorías y servicios. Aprendí cómo las claves foráneas y las restricciones protegen los datos desde la base: el precio no puede ser negativo, la duración debe ser mayor que cero y una categoría o servicio con dependencias no se elimina físicamente, se desactiva. En el catálogo, la búsqueda por nombre y el filtro por categoría usan consultas preparadas, por lo que una entrada como ' OR '1'='1 no altera la consulta. Puedo explicar las relaciones entre las siete tablas, el archivo schema.sql, catalogo.php y los formularios del CRUD en public/admin. Parte del código se desarrolló con asistencia de IA; lo revisé y lo probé en mi equipo."
+    },
+    {
+      "nombre": "Brayan Mela",
+      "github": "brayanmela17-hub",
+      "modulo": "Horarios y reservas",
+      "reflexion": "Mi módulo fue el de horarios y reservas, que es la parte con más reglas de negocio. Lo central que entendí es que el control de cupos no puede depender de deshabilitar un botón: la comprobación y el registro de la reserva se hacen juntos en una transacción, con un UPDATE condicionado que solo descuenta si quedan cupos. También entendí por qué cancelar dos veces no devuelve dos cupos: el cambio de estado solo ocurre si la reserva sigue PENDIENTE o CONFIRMADA. La clave foránea compuesta evita reservar un horario que no pertenece al servicio. Puedo explicar includes/reservas.php, el flujo PENDIENTE, CONFIRMADA y REALIZADA, y las validaciones de horarios (no en el pasado y hora final posterior a la inicial). Parte del código se desarrolló con asistencia de IA; lo revisé y lo probé en mi equipo."
+    },
+    {
+      "nombre": "Ian Ramos",
+      "github": "ianramos21-star",
+      "modulo": "Reseñas, interfaz y pruebas de seguridad",
+      "reflexion": "Mi módulo fue el de reseñas, la interfaz y las pruebas. Una reseña solo se puede publicar sobre una reserva propia en estado REALIZADA y una sola vez por reserva, y esa regla se valida en el servidor y también con una restricción única en la base de datos. Los comentarios se muestran con htmlspecialchars, por eso un texto como <script> aparece como texto y no se ejecuta; lo comprobamos en una prueba de XSS. En la interfaz usamos CSS propio con tema carbón y dorado, adaptable a teléfono. Puedo explicar resenar.php, cómo se muestra el promedio de calificaciones en el detalle del servicio y cada una de las siete pruebas de seguridad de security/SECURITY.md. Parte del código se desarrolló con asistencia de IA; lo revisé y lo probé en mi equipo."
+    }
+  ]
+}

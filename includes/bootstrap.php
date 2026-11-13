@@ -105,7 +105,7 @@ function csrf_check(): void
 {
     $enviado = $_POST['csrf'] ?? '';
     if (!is_string($enviado) || !hash_equals(csrf_token(), $enviado)) {
-        http_response_code(419);
+        http_response_code(403);
         exit('Solicitud rechazada: token de seguridad inválido. Recargue la página e intente de nuevo.');
     }
 }
