@@ -44,6 +44,7 @@ require __DIR__ . '/../includes/header.php';
 ?>
 <p><a href="<?= e(url('catalogo.php')) ?>">← Volver al catálogo</a></p>
 <section class="panel">
+  <img class="banner-img" src="<?= e(imagen_categoria($s['categoria'])) ?>" alt="">
   <span class="badge"><?= e($s['categoria']) ?></span>
   <h1><?= e($s['nombre']) ?></h1>
   <p><?= e($s['descripcion']) ?></p>

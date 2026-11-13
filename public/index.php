@@ -17,6 +17,7 @@ $titulo = 'Inicio';
 require __DIR__ . '/../includes/header.php';
 ?>
 <section class="hero">
+  <img class="hero-logo" src="<?= e(url('img/logo.svg')) ?>" alt="Navaja & Estilo">
   <h1>Corte, barba y estilo a tu medida</h1>
   <p>Reserva tu cita en <?= e(APP_NAME) ?> en pocos pasos: elige el servicio, escoge tu horario y listo.</p>
   <a class="btn" href="<?= e(url('catalogo.php')) ?>">Ver servicios</a>
@@ -27,6 +28,7 @@ require __DIR__ . '/../includes/header.php';
 <div class="grid">
   <?php foreach ($destacados as $s): ?>
     <article class="card">
+      <img class="card-img" src="<?= e(imagen_categoria($s['categoria'])) ?>" alt="">
       <div class="banda"><?= e($s['categoria']) ?></div>
       <div class="cuerpo">
         <h3><?= e($s['nombre']) ?></h3>

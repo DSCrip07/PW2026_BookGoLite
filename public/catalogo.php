@@ -48,6 +48,7 @@ require __DIR__ . '/../includes/header.php';
 <div class="grid">
   <?php foreach ($servicios as $s): ?>
     <article class="card">
+      <img class="card-img" src="<?= e(imagen_categoria($s['categoria'])) ?>" alt="">
       <div class="banda"><?= e($s['categoria']) ?></div>
       <div class="cuerpo">
         <h3><?= e($s['nombre']) ?></h3>
