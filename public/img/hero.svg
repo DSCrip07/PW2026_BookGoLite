@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2d231a"/><stop offset="1" stop-color="#14100d"/></linearGradient>
+    <pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="40" height="40" fill="#f1ebe3"/><rect width="40" height="13" fill="#b8473f"/><rect y="26" width="40" height="13" fill="#c9a24b"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="320" fill="url(#g)"/>
+  <g opacity=".55">
+    <rect x="70" y="50" width="46" height="220" rx="23" fill="url(#p)"/><rect x="58" y="42" width="70" height="12" rx="6" fill="#c9a24b"/><rect x="58" y="266" width="70" height="12" rx="6" fill="#c9a24b"/>
+    <rect x="1084" y="50" width="46" height="220" rx="23" fill="url(#p)"/><rect x="1072" y="42" width="70" height="12" rx="6" fill="#c9a24b"/><rect x="1072" y="266" width="70" height="12" rx="6" fill="#c9a24b"/>
+  </g>
+</svg>

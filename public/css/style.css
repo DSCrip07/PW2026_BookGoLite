@@ -84,3 +84,13 @@ th { color: var(--gold); font-size: .85rem; text-transform: uppercase; letter-sp
   .filtros { grid-template-columns: 1fr; }
   .nav { justify-content: center; }
 }
+
+/* Imágenes y logo (SVG propios en public/img) */
+.logo { display: inline-flex; align-items: center; gap: 8px; }
+.logo-img { width: 34px; height: 34px; }
+.hero { background: linear-gradient(rgba(21, 17, 14, .55), rgba(21, 17, 14, .75)), url("../img/hero.svg") center / cover no-repeat; }
+.hero-logo { width: 84px; height: 84px; margin-bottom: 8px; }
+.card-img { display: block; width: 100%; height: 130px; object-fit: cover; background: #14100d; }
+.banner-img { display: block; width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: 14px; }
+.card .precio, .panel .precio { font-size: 1.4rem; color: var(--gold); font-weight: 700; }
+@media (max-width: 640px) { .banner-img { height: 120px; } }

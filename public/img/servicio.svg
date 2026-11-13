@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2d231a"/><stop offset="1" stop-color="#14100d"/></linearGradient>
+    <pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="40" height="40" fill="#f1ebe3"/><rect width="40" height="13" fill="#b8473f"/><rect y="26" width="40" height="13" fill="#c9a24b"/>
+    </pattern>
+    <clipPath id="c"><rect x="170" y="24" width="60" height="152" rx="30"/></clipPath>
+  </defs>
+  <rect width="400" height="200" fill="url(#g)"/>
+  <rect x="170" y="24" width="60" height="152" rx="30" fill="url(#p)"/>
+  <rect x="156" y="14" width="88" height="14" rx="7" fill="#c9a24b"/><rect x="156" y="172" width="88" height="14" rx="7" fill="#c9a24b"/>
+</svg>
