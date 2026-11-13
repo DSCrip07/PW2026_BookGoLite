@@ -8,12 +8,13 @@ $u = usuario_actual();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= e($titulo ?? 'Inicio') ?> · <?= e(APP_NAME) ?></title>
+  <link rel="icon" type="image/svg+xml" href="<?= e(url('img/logo.svg')) ?>">
   <link rel="stylesheet" href="<?= e(url('css/style.css')) ?>">
 </head>
 <body>
 <header class="topbar">
   <div class="wrap nav">
-    <a class="logo" href="<?= e(url('index.php')) ?>">✂ <?= e(APP_NAME) ?></a>
+    <a class="logo" href="<?= e(url('index.php')) ?>"><img class="logo-img" src="<?= e(url('img/logo.svg')) ?>" alt=""> <?= e(APP_NAME) ?></a>
     <nav>
       <?php if (!$u): ?>
         <a href="<?= e(url('catalogo.php')) ?>">Servicios</a>

@@ -160,7 +160,7 @@ hist += [P("2. Negocio elegido", "h1"),
          Spacer(1, 6),
          P("<b>Tecnologías:</b> PHP 8.2 (PDO), MySQL/MariaDB, HTML5, CSS3 y JavaScript, sobre XAMPP (Apache). "
            "<b>Plantilla o biblioteca visual:</b> ninguna; el diseño (paleta carbón y dorado, tipografía y componentes) "
-           "es CSS propio, sin Bootstrap ni otras bibliotecas externas.")]
+           "es CSS propio, sin Bootstrap ni otras bibliotecas externas. El logotipo y las ilustraciones por categoría son SVG propios (public/img).")]
 
 # ================= 3. ER =================
 hist += [NextPageTemplate("horizontal"), PageBreak(), P("3. Diagrama entidad-relación", "h1"),
@@ -341,6 +341,18 @@ else:
         "Implementación de la política de contraseñas con carácter especial y del bloqueo por intentos, solicitados por el profesor.",
         "Diagnóstico y corrección de errores encontrados al probar: acentos corruptos al importar el SQL, hoja de estilos que no cargaba en XAMPP por la ruta base, desajuste de zona horaria en el bloqueo y código HTTP 419 que Apache convertía en 500.",
         "Redacción de security/SECURITY.md, del diagrama entidad-relación, de este informe y de los borradores de las reflexiones individuales, que cada integrante debe revisar y ajustar."]) + [
+        P("<b>Consultas relevantes hechas a la herramienta:</b>"),
+    ] + lista([
+        "«Crear el esquema de siete tablas para un gestor de citas con reseñas y explicar cómo las relaciones evitan datos inconsistentes».",
+        "«Implementar reservas que descuenten cupos de forma segura» (transacción con SELECT ... FOR UPDATE y UPDATE condicionado).",
+        "«Agregar contraseña con carácter especial obligatorio y bloqueo tras cinco intentos, con cuenta regresiva».",
+        "«Que el bloqueo sea por correo y no impida iniciar sesión con otra cuenta».",
+        "«Ejecutar y documentar las siete pruebas de seguridad del enunciado».",
+        "«Crear un logotipo e ilustraciones propias para la barbería».",
+    ]) + [
+        P("<b>Fragmentos incorporados:</b> el código de includes/, public/ y database/ fue generado con la herramienta y "
+          "luego revisado, probado y ajustado en el entorno del grupo. Las imágenes y el logotipo son SVG creados "
+          "con la herramienta; el diseño no usa plantillas ni bibliotecas externas."),
         P("<b>Verificación:</b> la IA ejecutó pruebas por consola de las reglas de negocio (cupos, estados, "
           "duplicados, propiedad de recursos) y de los controles de seguridad; el grupo reprodujo las pruebas de "
           "seguridad en el navegador y tomó las capturas que se incluyen como evidencia."),

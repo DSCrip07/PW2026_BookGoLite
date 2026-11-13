@@ -71,6 +71,13 @@ function url(string $ruta = ''): string
     return config('base_url') . '/' . ltrim($ruta, '/');
 }
 
+/** Imagen decorativa según la categoría (archivos SVG propios en public/img). */
+function imagen_categoria(string $categoria): string
+{
+    $mapa = ['cortes' => 'cat-cortes.svg', 'barba' => 'cat-barba.svg', 'tratamientos' => 'cat-tratamientos.svg'];
+    return url('img/' . ($mapa[strtolower(trim($categoria))] ?? 'servicio.svg'));
+}
+
 function redirect(string $ruta): never
 {
     header('Location: ' . url($ruta));

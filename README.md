@@ -29,4 +29,13 @@ Barbería **Navaja & Estilo**: cortes, barba y tratamientos capilares.
 Hecho: base de datos de 7 tablas, registro/login/logout, navegación por rol, CRUD de categorías, servicios y horarios, catálogo, reservas con control de cupos, cancelación, estados y reseñas.
 Pendiente: pruebas de seguridad documentadas (`security/SECURITY.md`) y PDF final.
 
-Instrucciones de instalación: ver [INSTALACION.md](INSTALACION.md).
+## Cómo ejecutar el sistema (XAMPP, Windows)
+1. Iniciar **Apache** y **MySQL** desde el panel de XAMPP y copiar el proyecto en `C:\xampp\htdocs\PW2026_BookGoLite`.
+2. Importar la base de datos (crea `bookgo_barberia` con las 7 tablas y datos de prueba):
+   `C:\xampp\mysql\bin\mysql.exe -u root < database\schema.sql`
+3. Crear el usuario ADMIN (la contraseña se pide por teclado; debe tener mayúscula, minúscula, número y carácter especial):
+   `C:\xampp\php\php.exe database\create_admin.php`
+4. Abrir **http://localhost/PW2026_BookGoLite/public/**
+
+Usuarios de prueba (clientes, contraseña `Cliente123!`): `carlos@ejemplo.com`, `luis@ejemplo.com`, `andres@ejemplo.com`.
+Más detalles y alternativas en [INSTALACION.md](INSTALACION.md). Pruebas y evidencias de seguridad en [security/SECURITY.md](security/SECURITY.md).
